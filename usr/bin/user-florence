@@ -1,0 +1,13 @@
+#! /bin/sh
+
+svirf_florence(){
+    if [ -f "$HOME/.config/florence/florence.conf" ]; then
+        florence --use-config "$HOME/.config/florence/florence.conf"
+    elif [ -f "/etc/svirf-florence.conf" ]; then
+        florence --use-config "/etc/svirf-florence.conf"
+    else
+        florence
+    fi
+}
+
+svirf_florence
